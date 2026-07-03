@@ -9,7 +9,7 @@ const CreatePost = () => {
         const formData = new FormData()
         formData.append('image', e.target.image.files[0])
         formData.append('caption', e.target.caption.value)
-        await axios.post('http://localhost:3000/create-post',formData)
+        await axios.post('http://localhost:3000/api/post/create',formData)
         e.target.reset()
         navigate('/feed')
 
